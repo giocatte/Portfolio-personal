@@ -2,10 +2,11 @@
 export default {
   content: [],
   theme: {
-    fontFamily: {
-      ubuntu: ['Ubuntu', 'sans-serif']
+    extend: {
+      fontFamily:{
+        nunito: ['Nunito']
+      }
     },
-    extend: {},
   },
   plugins: [],
 }
