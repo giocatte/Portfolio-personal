@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@font-face {font-family: "soria";src: url("~/assets/fonts/soria/soria-font.ttf");};
+@font-face {font-family: "nippo";src: url("~/assets/fonts/Nippo_Complete/Nippo_Complete/Fonts/TTF/Nippo-Variable.ttf");};
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-gray-800; 
+@layer base {
+  body {
+    @apply bg-gray-800 font-nippo /* font-Ubuntu */;
   }
-  
-  @layer components {
-    .btn {
-      @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm inline-block;
-    }
-    .card {
-      @apply p-3 rounded-md bg-white shadow-md h-full;
-    }
+}
+
+@layer components {
+  .btn {
+    @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm inline-block;
   }
+  .card {
+    @apply p-3 rounded-md bg-white shadow-md h-full;
+  }
+}
