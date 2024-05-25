@@ -8,19 +8,19 @@
 
 @layer base {
   body {
-    @apply bg-primary font-nippo /* font-Ubuntu */;
+    @apply bg-palette-primary font-nippo /* font-Ubuntu */;
   }
 }
 
 @layer components {
   .btn {
-    @apply bg-accent_1 text-white px-3 py-2 rounded-md text-sm inline-block;
+    @apply bg-palette-accent_1 text-white px-3 py-2 rounded-md text-sm inline-block;
   }
   .card {
     @apply p-3 rounded-md bg-white shadow-md h-full;
   }
   .text-h1{
-    @apply text-secondary text-6xl font-semibold
+    @apply text-palette-secondary text-6xl font-semibold
   }
   .left-nav {
     @apply absolute flex flex-col justify-center align-middle justify-items-center bg-red-500
