@@ -1,12 +1,18 @@
 <template>
   <div>
-    <header class="shadow-sm bg-gray-700">
-      <nav class="container mx-auto py-4 flex justify-between h-20 text-purple-600">
-        <NuxtLink to="/" class="text-xl font-bold font-Blackout">Giosuè Cattelan</NuxtLink>
+    <header class="">
+      <nav class="left-nav text-secondary">
         <ul class="flex gap-4">
-          <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><NuxtLink to="/about">About</NuxtLink></li>
-          <li><NuxtLink to="/products" class="btn">Merch</NuxtLink></li>
+          <NuxtLink to="/" class="btn">I</NuxtLink>
+          <li>
+            <NuxtLink to="/" class="btn">C</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/about" class="btn">O</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/products" class="btn">n</NuxtLink>
+          </li>
         </ul>
       </nav>
     </header>
@@ -17,7 +23,7 @@
 </template>
 
 <style scoped>
-  /* .router-link-exact-active {
+/* .router-link-exact-active {
     color: #a82d9d;
   } */
 </style>

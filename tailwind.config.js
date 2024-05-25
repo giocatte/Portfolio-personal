@@ -19,8 +19,14 @@ export default {
         '80vw': '80vw',
         '90vw': '90vw',
         '100vw': '100vw',
+      },
+      colors: {
+        primary: '#F8F9FA', /*white, background*/
+        secondary: '#212529', /*black, bold words*/
+        accent_1: '#32b941', /*green (original: #2DC653)*/
+        accent_2: '#5ac3dc' /*light-blue*/
       }
-    }
+    },
   },
   plugins: [],
 }
