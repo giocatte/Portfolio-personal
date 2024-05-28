@@ -2,12 +2,20 @@
 export default {
   content: [],
   theme: {
-    fontFamily: {
-      Ubuntu: 'Ubuntu, sans-serif',
-      soria: 'soria',
-      nippo: 'nippo'
-    },
     extend: {
+      fontFamily: {
+        Ubuntu: 'Ubuntu, sans-serif',
+        soria: 'soria',
+        nippo: 'nippo'
+      },
+      fontSize: {
+        h1: '10rem',
+        h2: '8rem',
+        h3: '7.5rem',
+        h4: '7rem',
+        h5: '6.25rem',
+        h6: '6rem',
+      },
       width: {
         '10vw': '10vw',
         '20vw': '20vw',
