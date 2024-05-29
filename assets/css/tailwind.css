@@ -20,3 +20,44 @@
     @apply p-3 rounded-md bg-white shadow-md h-full;
   }
 }
+
+@layer utilities {
+  .text-h1 { @apply text-[6rem]; }
+  .text-h2 { @apply text-[4rem]; }
+  .text-h3 { @apply text-[3.5rem]; }
+  .text-h4 { @apply text-[3rem]; }
+  .text-h5 { @apply text-[2.25rem]; }
+  .text-h6 { @apply text-[2rem]; }
+
+  @screen sm {
+    .text-h1 { @apply text-[8rem]; }
+    .text-h3 { @apply text-[5rem]; }
+    .text-h4 { @apply text-[4.text-5rem]; }
+    .text-h5 { @apply text-[4rem]; }
+    .text-h6 { @apply text-[3.5rem]; }
+  }
+  
+  @screen md {
+    .text-h1 { @apply text-[9rem]; }
+    .text-h3 { @apply text-[6rem]; }
+    .text-h4 { @apply text-[6rem]; }
+    .text-h5 { @apply text-[5rem]; }
+    .text-h6 { @apply text-[4.5rem]; }
+  }
+  
+  @screen lg {
+    .text-h1 { @apply text-[10rem]; }
+    .text-h3 { @apply text-[7.5rem]; }
+    .text-h4 { @apply text-[7rem]; }
+    .text-h5 { @apply text-[6.25rem]; }
+    .text-h6 { @apply text-[6rem]; }
+  }
+  
+  @screen xl {
+    .text-h1 { @apply text-[12rem]; }
+    .text-h3 { @apply text-[9rem]; }
+    .text-h4 { @apply text-[8rem]; }
+    .text-h5 { @apply text-[7.5rem]; }
+    .text-h6 { @apply text-[7rem]; }
+  }
+}
