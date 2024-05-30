@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>Projects will be here</p>
+  <div class="w-full h-full border border-black">
+    <p>hello, here I will place my projects :P</p>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>About</h2>
+    <h2>About me</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam
       minima unde nemo harum quam maxime optio quos corrupti. Eum sapiente
