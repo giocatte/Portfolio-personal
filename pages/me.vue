@@ -9,7 +9,6 @@
       Facere, commodi corrupti ipsam neque totam reprehenderit laboriosam
       laborum veniam est quo, repellat saepe impedit labore?
     </p>
-    <NuxtLink to="/">Home page</NuxtLink>
   </div>
 </template>
 

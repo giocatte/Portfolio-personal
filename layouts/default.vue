@@ -5,35 +5,42 @@
     >
       <div class="relative flex flex-col gap-2 border-palette-600 row-span-2">
         <div
-          :class="router.currentRoute.value.path === '/' ? 'invisible' : ''"
-          class="order-1 border-2 border-palette-accent_1 bg-[url('assets/images/me.png')] m-4 bg-[size:80%] bg-no-repeat bg-center aspect-square rounded-[50%]"
+          ref="mePic"
+          :class="
+            router.currentRoute.value.path === '/' ? 'invisible' : 'animateme'
+          "
+          class="order-1 border-2 border-palette-accent_1 bg-[url('assets/images/me.png')] m-4 bg-[size:80%] bg-no-repeat bg-center aspect-square rounded-full [box-shadow:theme(colors.palette.800)_0px_0px_20px_5px]"
         ></div>
-        <nav class="order-2 w-[100%] grow-[4] pt-8">
+        <nav
+          class="order-2 w-fit ml-4 mt-8 py-8 px-4 rounded-full bg-palette-400 h-fit"
+        >
           <ul class="flex flex-col flex-nowrap items-center space-y-12">
             <li class="max-w-min">
-              <NuxtLink to="/">
-                <Icon
-                  name="tdesign:home"
-                  size="3rem"
-                  class="iconStyle text-palette-600"
-                ></Icon>
+              <NuxtLink to="/" active-class="activeNav">
+                <div class="w-fit h-fit bg-palette-400 rounded-full">
+                  <Icon
+                    name="tdesign:home"
+                    size="3rem"
+                    class="iconStyle text-palette-300"
+                  ></Icon>
+                </div>
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/about">
+              <NuxtLink to="/projects" active-class="activeNav">
                 <Icon
                   name="tdesign:work"
                   size="3rem"
-                  class="iconStyle text-palette-600"
-                ></Icon>
-              </NuxtLink>
+                  class="iconStyle text-palette-300"
+                ></Icon
+              ></NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/about">
+              <NuxtLink to="/me" active-class="activeNav">
                 <Icon
                   name="tdesign:user-1"
                   size="3rem"
-                  class="iconStyle text-palette-600"
+                  class="iconStyle text-palette-300"
                 ></Icon>
               </NuxtLink>
             </li>
@@ -55,5 +62,22 @@ const router = useRouter();
 .iconStyle:hover {
   @apply text-palette-700;
   filter: drop-shadow(0px 0px 5px theme("colors.palette.600"));
+}
+.activeNav svg {
+  @apply text-palette-600;
+  filter: drop-shadow(0px 0px 1rem theme("colors.palette.secondary"));
+}
+
+.animateme {
+  animation-name: appearing;
+  animation-duration: 1500ms;
+}
+@keyframes appearing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

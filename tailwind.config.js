@@ -3,6 +3,9 @@ export default {
   content: [],
   theme: {
     extend: {
+      screens: {
+        '4k': '2000px',
+      },
       fontFamily: {
         Ubuntu: 'Ubuntu, sans-serif',
         soria: 'soria',
