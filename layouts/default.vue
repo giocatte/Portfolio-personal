@@ -1,20 +1,21 @@
 <template>
   <div class="bg-palette-800">
     <div
-      class="
-        md:max-w-[90%] lg:max-w-[80%] min-h-svh
-        scrollbar-none
-        mx-auto bg-palette-300 overflow-y-auto overflow-x-hidden
-        grid grid-cols-[15%_85%] grid-rows-[3.5rem_auto_4.2rem]
-        [box-shadow:theme(colors.palette.300)_0px_0px_20px_20px]"
+      class="md:max-w-[90%] lg:max-w-[80%] min-h-svh scrollbar-none mx-auto bg-palette-300 overflow-y-auto overflow-x-hidden grid grid-cols-[15%_85%] grid-rows-[3.5rem_auto_4.2rem] [box-shadow:theme(colors.palette.300)_0px_0px_20px_20px]"
     >
-      <div class="relative flex flex-col border-palette-600 row-span-2">
+      <div class="row-start-1 col-start-2 justify-self-end m-2">
+        <Icon name="emojione:flag-for-italy" size="2rem"></Icon>
+        <Icon name="emojione:flag-for-united-kingdom" size="2rem"></Icon>
+      </div>
+      <div
+        class="relative flex flex-col border-palette-600 sm:row-start-1 sm:row-span-2"
+      >
         <div
           ref="mePic"
           :class="
             router.currentRoute.value.path === '/' ? 'invisible' : 'animateme'
           "
-          class="order-1 border-2 border-palette-accent_1 bg-[url('assets/images/me.png')] m-4 bg-[size:80%] bg-no-repeat bg-center aspect-square rounded-full [box-shadow:theme(colors.palette.800)_0px_0px_20px_5px]"
+          class="order-1 border-2 border-palette-accent_1 bg-[url('assets/images/me_.png')] m-4 bg-[size:80%] bg-no-repeat bg-center aspect-square rounded-full [box-shadow:theme(colors.palette.800)_0px_0px_20px_5px]"
         ></div>
         <nav
           class="order-2 w-fit m-auto py-8 px-4 rounded-full bg-palette-400 h-fit"
