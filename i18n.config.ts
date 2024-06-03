@@ -4,9 +4,12 @@ export default defineI18nConfig(() => ({
   messages: {
     en: {
       welcome: "Welcome",
+      HiIam: "Hi, I am",
+      MeShortDesc: "",
     },
     it: {
       welcome: "Benvenuto",
+      HiIam: "Ciao, io sono",
     },
   },
 }));

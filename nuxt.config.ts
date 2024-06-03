@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       { code: "it", iso: "it-IT" },
     ],
     defaultLocale: "en",
-    strategy: 'no_prefix',
+    strategy: "no_prefix",
     detectBrowserLanguage: {
       useCookie: false,
       cookieKey: "i18n_redirected",
