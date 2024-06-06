@@ -9,7 +9,7 @@ export default defineI18nConfig(() => ({
     },
     it: {
       welcome: "Benvenuto",
-      HiIam: "Ciao, io sono",
+      HiIam: "Ciao, sono",
     },
   },
 }));

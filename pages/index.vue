@@ -6,7 +6,9 @@
       ></div>
     </NuxtLink>
     <div class="w-[75%] font-Ubuntu text-palette-secondary">
-      <p class="text-xl mt-4 pl-4">{{ $t("HiIam") }}</p>
+      <p class="text-xl mt-4 pl-4 animate__animated animate__fadeInLeft">
+        {{ $t("HiIam") }}
+      </p>
       <p class="text-h3 leading-none font-normal">Giosuè</p>
       <p class="text-h2 leading-none font-normal">Cattelan</p>
       <p class="text-xl mt-4 pl-4">
@@ -18,6 +20,8 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { locale, setLocale } = useI18n();
+</script>
 
 <style scoped></style>
