@@ -1,35 +1,44 @@
 <template>
-  <div class="w-full h-full border border-black">
+  <div>
     <p>hello, here I will place my projects :P</p>
-    <p
-      class="shadow-md bg-palette-400 p-4 min-w-48 text-center mx-auto mt-8 font-bold w-fit text-xl"
+    <div
+      class="w-full flex flex-row flex-wrap content-center justify-start items-stretch flexor"
     >
-      {{ $t("welcome") }}
-      locale: {{ locale }}
-    </p>
-    <div class="w-fit mx-auto">
-      <button @click="setLocale('it')" class="btn m-4">Italiano</button>
-      <button @click="setLocale('en')" class="btn m-4">English</button>
-    </div>
-    <div>
-      <ProjectCard :project="data.projects[0]" v-if="data"></ProjectCard>
+      <ProjectCard
+        v-for="p in projects"
+        :key="p.id"
+        :project="p"
+      ></ProjectCard>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import ProjectCard from "~/components/ProjectCard.vue";
 
-const { locale, setLocale } = useI18n();
+const projects = ref([]);
 
-const { data } = await useFetch("/api/projects");
-const projects = () =>
-  setTimeout(() => {
-    data.value.projects.map(function (project, key) {
-      console.log(project.Title, project.Description);
-    });
-  }, 2000);
-projects();
+onMounted(async () => {
+  const response = await fetch("/api/projects");
+  const data = await response.json();
+  projects.value = data.projects;
+});
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.flexor {
+  &:hover {
+    > .flexor {
+      &:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: 0px 0px 10px 1px #8695ec;
+      }
+      &:not(:hover) {
+        filter: blur(10px);
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+</style>

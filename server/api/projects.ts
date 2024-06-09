@@ -36,6 +36,13 @@ export default defineEventHandler((event) => {
           "Project Description of Project N.5, " +
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
       },
+      {
+        id: 6,
+        Title: "Project N.6",
+        Description:
+          "Project Description of Project N.6, " +
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+      },
     ],
   };
 });

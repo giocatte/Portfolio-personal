@@ -1,7 +1,7 @@
 <template>
   <article
     v-if="project"
-    class="w-[250px] transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer white hover:shadow-[10px_10px_0_#4e84ff,20px_20px_0_#4444bd] hover:border-[#0578c5] hover:transform hover:translate-[-20px,-20px] active:shadow-none active:transform active:translate-[0,0]"
+    class="flexor w-[80%] sm:w-[45%] mx-auto my-6 transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer white"
   >
     <div class="rounded-lg w-full h-[170px] bg-gray-400"></div>
     <div class="flex flex-col gap-[20px] pt-[20px] p-[10px]">
@@ -52,4 +52,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
