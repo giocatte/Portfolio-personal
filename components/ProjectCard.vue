@@ -1,9 +1,14 @@
 <template>
   <article
     v-if="project"
-    class="w-[250px] transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer white hover:shadow-[10px_10px_0_#4e84ff,20px_20px_0_#4444bd] hover:border-[#0578c5] hover:transform hover:translate-[-20px,-20px] active:shadow-none active:transform active:translate-[0,0]"
+    class="project w-[80%] sm:w-[45%] mx-auto my-6 transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer z-10"
+    :class="{ hovered: isHovered, blurred: isBlurred }"
+    @mouseenter="onHover(true)"
+    @mouseleave="onHover(false)"
   >
-    <div class="rounded-lg w-full h-[170px] bg-gray-400"></div>
+    <div class="rounded-lg w-full h-[170px] bg-gray-400">
+      <img src="../assets/images/Ethos.png" alt="" class="w-full h-full" />
+    </div>
     <div class="flex flex-col gap-[20px] pt-[20px] p-[10px]">
       <div class="flex justify-between items-center">
         <div
@@ -32,13 +37,15 @@
         </div>
       </div>
       <div class="flex gap-[10px]">
-        <span
-          class="bg-[rgba(165,96,247,0.43)] text-[rgb(85,27,177)] font-bold py-[0.3em] px-[0.7em] rounded-[15px] text-[12px] tracking-[-0.6px]"
-          >• Analytics</span
-        >
+        <button class="btn">
+          <span
+            class="bg-[rgba(165,96,247,0.43)] text-[rgb(85,27,177)] font-bold py-[0.3em] px-[0.7em] rounded-[15px] text-[12px] tracking-[-0.6px]"
+            >• Vue</span
+          >
+        </button>
         <span
           class="bg-[#b2b2fd] text-[#1a41cd] font-bold py-[0.3em] px-[0.7em] rounded-[15px] text-[12px] tracking-[-0.6px]"
-          >• Dashboards</span
+          >• 2023</span
         >
       </div>
     </div>
@@ -47,9 +54,40 @@
 
 <script>
 export default {
-  name: "ProjectComponent",
-  props: ["project"],
+  name: "ProjectCard",
+  props: {
+    project: Object,
+    isHovered: Boolean,
+  },
+  emits: ["hoverState"],
+  data() {
+    return {
+      isCardHovered: false,
+    };
+  },
+  computed: {
+    isBlurred() {
+      return this.isHovered && !this.isCardHovered;
+    },
+  },
+  methods: {
+    onHover(state) {
+      this.isCardHovered = state;
+      this.$emit("hoverState", state);
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.project {
+  transition: all 0.3s ease-in-out;
+  &.hovered {
+    transform: scale(1.1, 1.1);
+  }
+  &.blurred {
+    filter: blur(10px);
+    transform: scale(0.9);
+  }
+}
+</style>

@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    './i18n.config.ts',
+  ],
   theme: {
     extend: {
       screens: {

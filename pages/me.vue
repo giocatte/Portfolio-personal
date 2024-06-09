@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>About me</h2>
-    <p>
+    <h2>{{ $t("About") }} me</h2>
+    <p class="text-xl pt-8 pr-48 animate__animated animate__fadeIn">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aperiam
       minima unde nemo harum quam maxime optio quos corrupti. Eum sapiente
       facere nemo, laborum ullam non cum fuga quas eveniet harum molestiae minus
@@ -12,8 +12,7 @@
   </div>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
 h2 {
