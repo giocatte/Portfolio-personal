@@ -1,5 +1,6 @@
 <template>
   <div>
+  <div>
     <p>hello, here I will place my projects :P</p>
     <div
       class="w-full flex flex-row flex-wrap content-center justify-start items-stretch relative z-0 gap-x-12"
@@ -18,6 +19,7 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import { ref, onMounted } from "vue";
 import ProjectCard from "~/components/ProjectCard.vue";
 

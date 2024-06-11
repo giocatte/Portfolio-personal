@@ -78,8 +78,33 @@
 
 <script setup>
 import { ref, watch } from "vue";
+import { ref, watch } from "vue";
 const router = useRouter();
 const { locale, setLocale } = useI18n();
+const elements = ref(null);
+
+const toggleLocale = (lang) => {
+  // Trigger exit animation
+  elements.value = document.querySelectorAll(".animate__fadeIn");
+  elements.value.forEach((element) => {
+    element.classList.remove("animate__fadeIn");
+    element.classList.add("animate__fadeOut");
+  });
+
+  // Change the locale after the exit animation completes
+  setTimeout(() => {
+    setLocale(lang);
+    // Trigger entry animation
+    elements.value.forEach((element) => {
+      element.classList.remove("animate__fadeOut");
+      element.classList.add("animate__fadeIn");
+    });
+  }, 350); // Adjust delay as per your animation duration
+};
+
+watch(locale, (newLocale, oldLocale) => {
+  // This watcher can remain empty or handle other tasks
+});
 const elements = ref(null);
 
 const toggleLocale = (lang) => {
@@ -107,6 +132,12 @@ watch(locale, (newLocale, oldLocale) => {
 </script>
 
 <style lang="scss" scoped>
+.iconStyle {
+  @apply md:w-8 md:h-8;
+  :hover {
+    @apply text-palette-700;
+    filter: drop-shadow(0px 0px 5px theme("colors.palette.600"));
+  }
 .iconStyle {
   @apply md:w-8 md:h-8;
   :hover {
