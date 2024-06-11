@@ -15,6 +15,7 @@ export default defineEventHandler((event) => {
         Description:
           "Project Description of Project N.2, " +
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        imgUrl: "BDC.png",
       },
       {
         id: 3,
@@ -22,6 +23,7 @@ export default defineEventHandler((event) => {
         Description:
           "Project Description of Project N.3, " +
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        imgUrl: "Ethos.png",
       },
       {
         id: 4,
@@ -29,6 +31,7 @@ export default defineEventHandler((event) => {
         Description:
           "Project Description of Project N.4, " +
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        imgUrl: "Ethos.png",
       },
       {
         id: 5,
@@ -36,6 +39,7 @@ export default defineEventHandler((event) => {
         Description:
           "Project Description of Project N.5, " +
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        imgUrl: "Ethos.png",
       },
       {
         id: 6,
@@ -43,6 +47,7 @@ export default defineEventHandler((event) => {
         Description:
           "Project Description of Project N.6, " +
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        imgUrl: "Ethos.png",
       },
     ],
   };

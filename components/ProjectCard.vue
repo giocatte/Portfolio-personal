@@ -1,19 +1,21 @@
 <template>
   <article
     v-if="project"
-    class="project w-[80%] sm:w-[45%] mx-auto my-6 transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer z-10"
+    class="projectClass w-[80%] sm:w-[45%] bg-palette-300 hover:shadow-lg mx-auto my-6 transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer z-10"
     :class="{ hovered: isHovered, blurred: isBlurred }"
     @mouseenter="onHover(true)"
     @mouseleave="onHover(false)"
   >
-    <div class="rounded-lg w-full h-[170px] bg-gray-400">
-      <img src="../assets/images/Ethos.png" alt="" class="w-full h-full" />
-    </div>
+    <div
+      class="rounded-lg w-full h-auto aspect-video overflow-hidden bg-center bg-no-repeat bg-[length:101%_101%]"
+      :style="{ backgroundImage: `url('/images/${project.imgUrl}')` }"
+    ></div>
     <div class="flex flex-col gap-[20px] pt-[20px] p-[10px]">
       <div class="flex justify-between items-center">
         <div
           class="text-base font-semibold text-black whitespace-nowrap overflow-hidden text-ellipsis"
         >
+          <p class="text-2xl">{{ project.imgUrl }}</p>
           {{ project.Title }}
         </div>
         <div
@@ -56,8 +58,20 @@
 export default {
   name: "ProjectCard",
   props: {
-    project: Object,
-    isHovered: Boolean,
+    project: {
+      type: Object,
+      required: true,
+      default: () => ({
+        id: 0,
+        Title: "",
+        Description: "",
+        imgUrl: "",
+      }),
+    },
+    isHovered: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ["hoverState"],
   data() {
@@ -79,8 +93,8 @@ export default {
 };
 </script>
 
-<style scoped>
-.project {
+<style lang="scss" scoped>
+.projectClass {
   transition: all 0.3s ease-in-out;
   &.hovered {
     transform: scale(1.1, 1.1);

@@ -10,7 +10,9 @@
         {{ $t("HiIam") }}
       </p>
       <p class="pl-2 text-h3 leading-none font-normal tracking-wider">Giosuè</p>
-      <p class="pl-2 text-h2 leading-none font-normal tracking-wider">Cattelan</p>
+      <p class="pl-2 text-h2 leading-none font-normal tracking-wider">
+        Cattelan
+      </p>
       <p
         class="text-xl w-fit mt-4 pl-4 animate__animated animate__fadeIn"
         v-html="$t('MeShortDesc')"
