@@ -2,7 +2,7 @@
   <div class="max-h-svh overflow-y-scroll no-scrollbar">
     <div class="bg-gradientCSS"></div>
     <div
-      class="md:max-w-[95%] lg:max-w-[85%] min-h-svh px-2 overflow-y-scroll no-scrollbar mx-auto grid grid-cols-[5rem_auto_5rem] grid-rows-[7rem_auto_4.25rem] z-0"
+      class="relative md:max-w-[95%] lg:max-w-[85%] min-h-svh px-2 overflow-y-scroll no-scrollbar mx-auto grid grid-cols-[5rem_auto_5rem] grid-rows-[7rem_auto_4.25rem] z-0"
     >
       <div
         ref="mePic"
@@ -71,7 +71,7 @@
         </button>
       </div>
       <NuxtPage
-        class="relative row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
+        class="absolute row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
       />
     </div>
   </div>

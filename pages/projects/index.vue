@@ -2,7 +2,7 @@
   <div>
     <p>hello, here I will place my projects :P</p>
     <div
-      class="w-72 justify-self-center flex flex-row flex-wrap content-center justify-start sm:justify-center items-stretch sm:items-start relative z-0 gap-x-12 sm:gap-x-14 gap-y-4"
+      class="w-full justify-self-center flex flex-row flex-wrap content-center justify-start sm:justify-center items-stretch sm:items-start relative z-0 gap-x-12 sm:gap-x-14 gap-y-4"
       @mouseenter="onMouseEnter"
       @mouseleave="onMouseLeave"
     >
