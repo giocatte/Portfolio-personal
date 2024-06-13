@@ -3,51 +3,68 @@ export default defineEventHandler((event) => {
     projects: [
       {
         id: 1,
-        Title: "Project N.1",
-        Description:
-          "Project Description of Project N.1, " +
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        Title: "Ethos Web Studio",
+        Description: {
+          en: "English Description and Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          it: "Descrizione Italiana e Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        },
+        lang: "Vue 3",
         imgUrl: "Ethos.png",
+        WebUrl: "https://ethoswebstudio.it",
       },
       {
         id: 2,
-        Title: "Project N.2",
-        Description:
-          "Project Description of Project N.2, " +
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
+        Title: "La Bottega Del Cicchetto",
+        Description: {
+          en: "English Description and Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          it: "Descrizione Italiana e Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        },
+        lang: "Vue 3",
         imgUrl: "BDC.png",
+        WebUrl: "https://labottegadelcicchetto-demo.web.app/",
       },
       {
         id: 3,
-        Title: "Project N.3",
-        Description:
-          "Project Description of Project N.3, " +
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
-        imgUrl: "Ethos.png",
+        Title: "Portfolio",
+        Description: {
+          en: "English Description and Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          it: "Descrizione Italiana e Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        },
+        lang: "Nuxt 3",
+        imgUrl: "Portfolio.png",
+        WebUrl: "",
       },
       {
         id: 4,
-        Title: "Project N.4",
-        Description:
-          "Project Description of Project N.4, " +
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
-        imgUrl: "Ethos.png",
+        Title: "Blog",
+        Description: {
+          en: "English Description and Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          it: "Descrizione Italiana e Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        },
+        lang: "React 4",
+        imgUrl: "",
+        WebUrl: "",
       },
       {
         id: 5,
-        Title: "Project N.5",
-        Description:
-          "Project Description of Project N.5, " +
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
-        imgUrl: "Ethos.png",
+        Title: "HomeLab",
+        Description: {
+          en: "English Description and Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          it: "Descrizione Italiana e Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        },
+        lang: "Docker",
+        imgUrl: "",
+        WebUrl: "",
       },
       {
         id: 6,
         Title: "Project N.6",
-        Description:
-          "Project Description of Project N.6, " +
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque excepturi quo minima mollitia sed tenetur vero ducimus numquam reprehenderit eligendi?",
-        imgUrl: "Ethos.png",
+        Description: {
+          en: "English Description and Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          it: "Descrizione Italiana e Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        },
+        imgUrl: "",
+        WebUrl: "",
       },
     ],
   };
