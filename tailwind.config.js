@@ -31,6 +31,9 @@ export default {
           "secondary": '#212529', /*black, bold words*/
           "accent_1": '#32b941', /*green (original: #2DC653)*/
           "accent_2": '#5ac3dc', /*light-blue*/
+          "BG_blue": "#49e2e4e2",
+          "BG_avory": "#e5e7ebce",
+          "BG_green": "#00ff6ba7",
           100: "#F9FAFB",
           200: "#F3F4F6",
           300: "#E5E7EB",

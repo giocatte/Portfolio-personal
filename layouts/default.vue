@@ -2,20 +2,21 @@
   <div class="max-h-svh overflow-y-scroll no-scrollbar">
     <div class="bg-gradientCSS"></div>
     <div
-      class="relative md:max-w-[95%] lg:max-w-[85%] min-h-svh px-2 overflow-y-scroll no-scrollbar mx-auto grid grid-cols-[5rem_auto_5rem] grid-rows-[7rem_auto_4.25rem] z-0"
+      class="relative md:max-w-[95%] lg:max-w-[85%] min-h-svh px-2 mx-auto grid grid-cols-[5rem_auto_5rem] grid-rows-[7rem_auto_4.25rem] z-0"
     >
-      <div
+      <NuxtLink
+        to="/"
         ref="mePic"
         :class="
           router.currentRoute.value.path === '/' ? 'invisible' : 'animateme'
         "
-        class="row-start-1 col-start-1 w-full h-auto my-auto border-2 border-palette-accent_1 bg-[url('assets/images/me.webp')] bg-[size:80%] bg-no-repeat bg-center aspect-square rounded-full"
-      ></div>
+        class="row-start-1 col-start-1 w-full h-auto my-auto border-2 border-palette-accent_1 bg-[url('assets/images/me.webp')] bg-[size:80%] bg-no-repeat bg-center aspect-square rounded-full cursor-default"
+      ></NuxtLink>
       <nav
         class="row-start-1 col-start-2 w-fit h-fit m-auto rounded-full bg-palette-400"
       >
         <ul class="flex flex-row flex-nowrap items-center space-x-4">
-          <li class="p-3">
+          <li class="p-3 relative">
             <NuxtLink to="/" active-class="activeNav">
               <div class="w-fit h-fit bg-palette-400 rounded-full">
                 <Icon
@@ -25,8 +26,18 @@
                 ></Icon>
               </div>
             </NuxtLink>
+            <p
+              class="absolute -bottom-4 left-2 text-sm text-palette-500"
+              :class="
+                router.currentRoute.value.path === '/'
+                  ? 'animateme'
+                  : 'invisible'
+              "
+            >
+              Home
+            </p>
           </li>
-          <li class="p-3">
+          <li class="p-3 relative">
             <NuxtLink to="/projects" active-class="activeNav">
               <Icon
                 name="tdesign:work"
@@ -34,8 +45,18 @@
                 class="iconStyle text-palette-300"
               ></Icon
             ></NuxtLink>
+            <p
+              class="absolute -bottom-4 left-0 text-sm text-palette-500"
+              :class="
+                router.currentRoute.value.path === '/projects'
+                  ? 'animateme'
+                  : 'invisible'
+              "
+            >
+              Projects
+            </p>
           </li>
-          <li class="p-3">
+          <li class="p-3 relative">
             <NuxtLink to="/me" active-class="activeNav">
               <Icon
                 name="tdesign:user-1"
@@ -43,6 +64,16 @@
                 class="iconStyle text-palette-300"
               ></Icon>
             </NuxtLink>
+            <p
+              class="absolute -bottom-4 left-[1.125rem] text-sm text-palette-500"
+              :class="
+                router.currentRoute.value.path === '/me'
+                  ? 'animateme'
+                  : 'invisible'
+              "
+            >
+              Me
+            </p>
           </li>
         </ul>
       </nav>
@@ -130,21 +161,21 @@ watch(locale, (newLocale, oldLocale) => {
   background: rgb(73, 226, 228);
   background: -moz-linear-gradient(
     315deg,
-    rgba(73, 226, 228, 0.8850396848192402) 0%,
-    rgba(229, 231, 235, 0.8094094327183998) 48%,
-    rgba(0, 255, 107, 0.6525466876203607) 100%
+    theme("colors.palette.BG_blue") 0%,
+    theme("colors.palette.BG_avory") 48%,
+    theme("colors.palette.BG_green") 100%
   );
   background: -webkit-linear-gradient(
     315deg,
-    rgba(73, 226, 228, 0.8850396848192402) 0%,
-    rgba(229, 231, 235, 0.8094094327183998) 48%,
-    rgba(0, 255, 107, 0.6525466876203607) 100%
+    theme("colors.palette.BG_blue") 0%,
+    theme("colors.palette.BG_avory") 48%,
+    theme("colors.palette.BG_green") 100%
   );
   background: linear-gradient(
     315deg,
-    rgba(73, 226, 228, 0.8850396848192402) 0%,
-    rgba(229, 231, 235, 0.8094094327183998) 48%,
-    rgba(0, 255, 107, 0.6525466876203607) 100%
+    theme("colors.palette.BG_blue") 0%,
+    theme("colors.palette.BG_avory") 48%,
+    theme("colors.palette.BG_green") 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#49e2e4",endColorstr="#00ff6b",GradientType=1);
   filter: blur(80px);

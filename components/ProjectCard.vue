@@ -1,7 +1,7 @@
 <template>
   <article
     v-if="project"
-    class="projectClass relative w-[80%] sm:w-[45%] bg-palette-300 hover:shadow-lg mx-auto sm:mx-0 my-6 transition-all duration-150 ease-in-out rounded-[10px] cursor-pointer z-10"
+    class="projectClass relative w-[87.5%] sm:w-[42.5%] bg-palette-300 hover:shadow-lg mx-auto sm:mx-0 my-6 transition-all duration-150 ease-in-out rounded-[10px] z-10"
     :class="{ hovered: isHovered, blurred: isBlurred }"
     @mouseenter="onHover(true)"
     @mouseleave="onHover(false)"
@@ -18,27 +18,27 @@
       <p class="text-xl">{{ $t("CodeIP") }}</p>
       <WIP_Loader></WIP_Loader>
     </div>
-    <div class="flex flex-col gap-[20px] pt-[20px] p-[10px]">
+    <div class="flex flex-col sm:gap-2 pt-1 sm:pt-3 p-2">
       <div class="flex justify-between items-center">
-        <div
-          class="text-base font-semibold text-black whitespace-nowrap overflow-hidden text-ellipsis"
-        >
-          <p class="text-2xl">{{ project.Title }}</p>
-          <p
-            v-if="locale == 'it'"
-            class="text-lg animate__animated animate__fadeIn"
-          >
-            {{ project.Description.it }}
+        <div class="text-black overflow-x-hidden text-ellipsis">
+          <p class="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2">
+            {{ project.Title }}
           </p>
           <p
-            v-else-if="locale == 'en'"
-            class="text-lg animate__animated animate__fadeIn"
+            v-if="locale == 'en'"
+            class="text-sm h-24 leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto whitespace-pre-wrap text-justify"
           >
             {{ project.Description.en }}
           </p>
+          <p
+            v-else-if="locale == 'it'"
+            class="text-sm h-24 leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto whitespace-pre-wrap text-justify"
+          >
+            {{ project.Description.it }}
+          </p>
         </div>
         <div
-          class="w-[50px] h-[50px] p-[9px] rounded-full transition-all duration-300 ease transform hover:rotate-[-45deg] hover:bg-[#a6c2f0]"
+          class="w-[50px] h-auto p-2 rounded-full transition-all duration-300 ease transform hover:rotate-[-45deg] hover:bg-palette-BG_blue/35"
         >
           <a :href="project.WebUrl" target="_blank">
             <svg
@@ -60,15 +60,13 @@
         </div>
       </div>
       <div class="flex gap-[10px]">
-        <button class="">
-          <span
-            class="bg-[rgba(165,96,247,0.43)] text-[rgb(85,27,177)] font-bold py-[0.3em] px-[0.7em] rounded-[15px] text-[12px] tracking-[-0.6px]"
-            >• {{ project.lang }}</span
-          >
-        </button>
+        <span
+          class="bg-[rgba(165,96,247,0.43)] text-[rgb(85,27,177)] font-bold py-[0.3em] px-[0.7em] rounded-[15px] text-[12px] tracking-[-0.6px]"
+          >• {{ project.lang }}</span
+        >
         <span
           class="bg-[#b2b2fd] text-[#1a41cd] font-bold py-[0.3em] px-[0.7em] rounded-[15px] text-[12px] tracking-[-0.6px]"
-          >• 2023</span
+          >• {{ project.year }}</span
         >
       </div>
     </div>
@@ -91,6 +89,8 @@ const props = defineProps({
         en: "",
         it: "",
       },
+      lang: "",
+      year: 0,
       imgUrl: "",
       WebUrl: "",
     }),

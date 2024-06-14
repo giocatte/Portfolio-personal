@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply bg-palette-primary font-nippo max-h-[100vh] overflow-hidden /* font-Ubuntu */;
+    @apply bg-palette-primary font-nippo max-h-[100vh] overflow-hidden;
   }
 }
 
