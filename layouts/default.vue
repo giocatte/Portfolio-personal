@@ -102,8 +102,9 @@
         </button>
       </div>
       <NuxtPage
-        class="absolute row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
+        class="relative row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
       />
+      <Footer class="relative row-start-3 col-start-1 col-span-3 sm:col-start-2 sm:col-span-1 w-full h-full justify-self-center"></Footer>
     </div>
   </div>
 </template>

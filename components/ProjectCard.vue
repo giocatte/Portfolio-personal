@@ -21,18 +21,20 @@
     <div class="flex flex-col sm:gap-2 pt-1 sm:pt-3 p-2">
       <div class="flex justify-between items-center">
         <div class="text-black overflow-x-hidden text-ellipsis">
-          <p class="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2">
+          <p
+            class="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2 sm:text-ellipsis sm:overflow-x-hidden sm:whitespace-nowrap"
+          >
             {{ project.Title }}
           </p>
           <p
             v-if="locale == 'en'"
-            class="text-sm h-24 leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto whitespace-pre-wrap text-justify"
+            class="text-sm min-h-14 mb-2 sm:h-32 h-fit leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto sm:no-scrollbar whitespace-pre-wrap text-justify"
           >
             {{ project.Description.en }}
           </p>
           <p
             v-else-if="locale == 'it'"
-            class="text-sm h-24 leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto whitespace-pre-wrap text-justify"
+            class="text-sm min-h-14 mb-2 sm:h-32 h-fit leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto sm:no-scrollbar whitespace-pre-wrap text-justify"
           >
             {{ project.Description.it }}
           </p>
@@ -108,8 +110,10 @@ const isCardHovered = ref(false);
 const isBlurred = computed(() => props.isHovered && !isCardHovered.value);
 
 function onHover(state) {
-  isCardHovered.value = state;
-  emit("hoverState", state);
+  if (window.innerWidth >= 640) {
+    isCardHovered.value = state;
+    emit("hoverState", state);
+  }
 }
 </script>
 
