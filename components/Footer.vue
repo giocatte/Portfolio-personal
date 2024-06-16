@@ -19,12 +19,13 @@
     <a href="mailto:giosuecattelan@gmail.com" target="_blank">
       <Icon
         name="bxl:gmail"
-        size="1.5rem"
-        class="text-red-500 sm:text-palette-500 sm:hover:text-red-500"
+        class="rounded-md w-6 h-5 bg-white hover:bg-white text-red-500 sm:text-palette-500 sm:hover:text-red-500"
       ></Icon
     ></a>
-    <p class="text-xl text-palette-1000 justify-self-center">Giosuè Cattelan</p>
-    <p class="text-sm text-palette-800">2024</p>
+    <div class="self-end">
+      <p class="text-xl text-palette-1000">Giosuè Cattelan</p>
+      <p class="text-[.5rem] text-center text-palette-800">2024</p>
+    </div>
   </div>
 </template>
 

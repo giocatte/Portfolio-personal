@@ -1,7 +1,7 @@
 <template>
   <article
     v-if="project"
-    class="projectClass relative w-[87.5%] sm:w-[42.5%] bg-palette-300 hover:shadow-lg mx-auto sm:mx-0 my-6 transition-all duration-150 ease-in-out rounded-[10px] z-10"
+    class="projectClass relative w-[87.5%] sm:w-[40%] sm:mt-10 bg-palette-300 hover:shadow-lg mx-auto sm:mx-0 my-6 transition-all duration-150 ease-in-out rounded-[10px] z-10"
     :class="{ hovered: isHovered, blurred: isBlurred }"
     @mouseenter="onHover(true)"
     @mouseleave="onHover(false)"
@@ -28,16 +28,14 @@
           </p>
           <p
             v-if="locale == 'en'"
-            class="text-sm min-h-14 mb-2 sm:h-32 h-fit leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto sm:no-scrollbar whitespace-pre-wrap text-justify"
-          >
-            {{ project.Description.en }}
-          </p>
+            class="projectDesc text-sm min-h-14 mb-2 sm:h-32 h-fit leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto sm:no-scrollbar whitespace-pre-wrap text-justify"
+            v-html="project.Description.en"
+          ></p>
           <p
             v-else-if="locale == 'it'"
-            class="text-sm min-h-14 mb-2 sm:h-32 h-fit leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto sm:no-scrollbar whitespace-pre-wrap text-justify"
-          >
-            {{ project.Description.it }}
-          </p>
+            class="projectDesc text-sm min-h-14 mb-2 sm:h-32 h-fit leading-[1.15rem] animate__animated animate__fadeIn break-normal overflow-y-auto sm:no-scrollbar whitespace-pre-wrap text-justify"
+            v-html="project.Description.it"
+          ></p>
         </div>
         <div
           class="w-[50px] h-auto p-2 rounded-full transition-all duration-300 ease transform hover:rotate-[-45deg] hover:bg-palette-BG_blue/35"

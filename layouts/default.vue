@@ -53,7 +53,7 @@
                   : 'invisible'
               "
             >
-              Projects
+              {{ $t("Projects") }}
             </p>
           </li>
           <li class="p-3 relative">
@@ -104,7 +104,9 @@
       <NuxtPage
         class="relative row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
       />
-      <Footer class="relative row-start-3 col-start-1 col-span-3 sm:col-start-2 sm:col-span-1 w-full h-full justify-self-center"></Footer>
+      <Footer
+        class="relative row-start-3 col-start-1 col-span-3 sm:col-start-2 sm:col-span-1 w-full h-full justify-self-center"
+      ></Footer>
     </div>
   </div>
 </template>

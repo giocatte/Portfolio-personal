@@ -10,6 +10,7 @@ export default defineI18nConfig(() => ({
       MeShortDesc: `<span class="text-palette-accent_1">Full Stack</span> Developer, passionate about <span class="text-palette-accent_1">Front End</span> coding.`,
       About: "About",
       CodeIP: "Coding in progress..",
+      Projects: "Projects"
     },
     it: {
       welcome: "Benvenuto",
@@ -17,6 +18,7 @@ export default defineI18nConfig(() => ({
       MeShortDesc: `<span class="text-palette-accent_1">Full Stack</span> Developer, appassionato in <span class="text-palette-accent_1">Front End</span> coding.`,
       About: "Su di",
       CodeIP: "Scrivendo codice..",
+      Projects: "Progetti"
     },
   },
 }));

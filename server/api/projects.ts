@@ -29,8 +29,8 @@ export default defineEventHandler((event) => {
         id: 3,
         Title: "Portfolio",
         Description: {
-          en: "A Portfolio Website created via Nuxtjs that you are visiting right now, you can find the project code on my Github page!",
-          it: "Un Sito Web Portfolio creato tramite Nuxtjs che stai visitando in questo momento, puoi trovare il codice del progetto nella mia pagina Github!",
+          en: "A Portfolio Website created via Nuxtjs that you are visiting right now, you can find the project code on my <a href='https://github.com/giocatte/Portfolio-personal' target='_blank' style='text-decoration: underline'>Github page</a>!",
+          it: "Un Sito Web Portfolio creato tramite Nuxtjs che stai visitando in questo momento, puoi trovare il codice del progetto nella mia <a href='https://github.com/giocatte/Portfolio-personal' target='_blank' style='text-decoration: underline'>pagina Github</a>!",
         },
         lang: "Nuxt 3",
         year: 2024,
