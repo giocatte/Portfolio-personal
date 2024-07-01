@@ -1,5 +1,7 @@
 <template>
-  <div class="max-h-svh overflow-y-scroll no-scrollbar">
+  <div
+    class="max-h-svh overflow-y-scroll no-scrollbar bg-palette-BG_avory relative z-10"
+  >
     <div class="bg-gradientCSS"></div>
     <div
       class="relative md:max-w-[95%] lg:max-w-[85%] min-h-svh px-2 mx-auto grid grid-cols-[5rem_auto_5rem] grid-rows-[7rem_auto_4.25rem] z-0"
@@ -104,9 +106,10 @@
       <NuxtPage
         class="relative row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
       />
-      <Footer
+      <!-- <Footer
         class="relative row-start-3 col-start-1 col-span-3 sm:col-start-2 sm:col-span-1 w-full h-full justify-self-center"
-      ></Footer>
+      ></Footer> -->
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -154,36 +157,7 @@ watch(locale, (newLocale, oldLocale) => {
   filter: drop-shadow(0px 0px 1rem theme("colors.palette.secondary"));
 }
 .bg-gradientCSS {
-  @apply bg-palette-300;
-  z-index: -10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100svh;
-  background: rgb(73, 226, 228);
-  background: -moz-linear-gradient(
-    315deg,
-    theme("colors.palette.BG_blue") 0%,
-    theme("colors.palette.BG_avory") 48%,
-    theme("colors.palette.BG_green") 100%
-  );
-  background: -webkit-linear-gradient(
-    315deg,
-    theme("colors.palette.BG_blue") 0%,
-    theme("colors.palette.BG_avory") 48%,
-    theme("colors.palette.BG_green") 100%
-  );
-  background: linear-gradient(
-    315deg,
-    theme("colors.palette.BG_blue") 0%,
-    theme("colors.palette.BG_avory") 48%,
-    theme("colors.palette.BG_green") 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#49e2e4",endColorstr="#00ff6b",GradientType=1);
-  filter: blur(80px);
-  opacity: 60%;
-  transform: scale(1.25);
+  @apply bg-palette-BG_green -z-[8] fixed top-0 left-0 w-full h-svh [clip-path:_polygon(100%_0,_40%_0,_100%_100%,_100%_0)] md:[clip-path:_polygon(32.5%_0,_100%_0,_100%_100%,_82%_100%)];
 }
 
 .animateme {

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row flex-nowrap items-center justify-center gap-x-4 sm:gap-x-12 pt-3"
+    class="fixed w-full bottom-2 z-0 left-0 flex flex-row flex-nowrap items-center justify-center gap-x-4 sm:gap-x-12 pt-3 childrenShadow"
   >
     <a href="https://www.linkedin.com/in/giosue-cattelan/" target="_blank">
       <Icon
@@ -19,7 +19,7 @@
     <a href="mailto:giosuecattelan@gmail.com" target="_blank">
       <Icon
         name="bxl:gmail"
-        class="rounded-md w-6 h-5 bg-white hover:bg-white text-red-500 sm:text-palette-500 sm:hover:text-red-500"
+        class="rounded-md w-6 h-5 bg-white sm:bg-transparent sm:hover:bg-white text-red-500 sm:text-palette-500 sm:hover:text-red-500"
       ></Icon
     ></a>
     <div class="self-end">
@@ -31,4 +31,15 @@
 
 <script setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.childrenShadow {
+  > * svg,
+  p {
+    filter: drop-shadow(0 3px 9px theme("colors.palette.BG_blue"));
+    z-index: 0;
+  }
+  &:hover > * {
+    // @apply sm:hover:bg-palette-300;
+  }
+}
+</style>
