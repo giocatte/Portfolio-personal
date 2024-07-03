@@ -1,7 +1,14 @@
 <template>
   <div
-    class="fixed w-full bottom-2 z-0 left-0 flex flex-row flex-nowrap items-center justify-center gap-x-4 sm:gap-x-12 pt-3 childrenShadow"
+    class="relative w-full self-center col-start-2 -z-10 left-0 flex flex-row flex-nowrap items-center justify-center gap-x-4 sm:gap-x-12 pt-3 childrenShadow"
   >
+    <a href="../assets/files/CV_ITA.pdf" target="_blank">
+      <Icon
+        name="teenyicons:pdf-outline"
+        size="1.5rem"
+        class="text-red-400 sm:text-palette-500 sm:hover:text-red-400"
+      ></Icon
+    ></a>
     <a href="https://www.linkedin.com/in/giosue-cattelan/" target="_blank">
       <Icon
         name="bxl:linkedin"
@@ -22,10 +29,10 @@
         class="rounded-md w-6 h-5 bg-white sm:bg-transparent sm:hover:bg-white text-red-500 sm:text-palette-500 sm:hover:text-red-500"
       ></Icon
     ></a>
-    <div class="self-end">
+    <!-- <div class="self-end">
       <p class="text-xl text-palette-1000">Giosuè Cattelan</p>
       <p class="text-[.5rem] text-center text-palette-800">2024</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
