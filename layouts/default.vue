@@ -28,16 +28,6 @@
                 ></Icon>
               </div>
             </NuxtLink>
-            <p
-              class="absolute -bottom-4 left-2 text-sm text-palette-500"
-              :class="
-                router.currentRoute.value.path === '/'
-                  ? 'animateme'
-                  : 'invisible'
-              "
-            >
-              Home
-            </p>
           </li>
           <li class="p-3 relative">
             <NuxtLink to="/projects" active-class="activeNav">
@@ -47,16 +37,6 @@
                 class="iconStyle text-palette-300"
               ></Icon
             ></NuxtLink>
-            <p
-              class="absolute -bottom-4 left-0 text-sm text-palette-500"
-              :class="
-                router.currentRoute.value.path === '/projects'
-                  ? 'animateme'
-                  : 'invisible'
-              "
-            >
-              {{ $t("Projects") }}
-            </p>
           </li>
           <li class="p-3 relative">
             <NuxtLink to="/me" active-class="activeNav">
@@ -66,16 +46,6 @@
                 class="iconStyle text-palette-300"
               ></Icon>
             </NuxtLink>
-            <p
-              class="absolute -bottom-4 left-[1.125rem] text-sm text-palette-500"
-              :class="
-                router.currentRoute.value.path === '/me'
-                  ? 'animateme'
-                  : 'invisible'
-              "
-            >
-              Me
-            </p>
           </li>
         </ul>
       </nav>

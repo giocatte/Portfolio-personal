@@ -2,7 +2,7 @@
   <div
     class="relative w-full self-center col-start-2 -z-10 left-0 flex flex-row flex-nowrap items-center justify-center gap-x-4 sm:gap-x-12 pt-3 childrenShadow"
   >
-    <a href="../assets/files/CV_ITA.pdf" target="_blank">
+    <a href="/assets/files/CV_ITA.pdf" target="_blank">
       <Icon
         name="teenyicons:pdf-outline"
         size="1.5rem"
