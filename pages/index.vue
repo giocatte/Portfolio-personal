@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div
+    class="relative row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
+  >
     <div class="w-[75%] font-Ubuntu text-palette-secondary">
       <p class="text-xl w-fit mt-4 pl-4 animate__animated animate__fadeIn">
         {{ $t("HiIam") }}

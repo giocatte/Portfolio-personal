@@ -73,13 +73,11 @@
           ></Icon>
         </button>
       </div>
-      <NuxtPage
-        class="relative row-start-2 col-start-1 col-span-3 w-full h-full justify-self-center"
-      />
+      <NuxtPage />
       <!-- <Footer
         class="relative row-start-3 col-start-1 col-span-3 sm:col-start-2 sm:col-span-1 w-full h-full justify-self-center"
       ></Footer> -->
-      <Footer></Footer>
+      <Footer v-if="router.currentRoute.value.path !== '/me'"></Footer>
     </div>
   </div>
 </template>

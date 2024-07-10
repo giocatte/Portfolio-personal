@@ -9,7 +9,7 @@
     <div
       v-if="project.imgUrl !== ''"
       class="rounded-lg w-full h-auto aspect-video overflow-hidden bg-center bg-no-repeat bg-[length:101%_101%]"
-      :style="{ backgroundImage: `url('/images/${project.imgUrl}')` }"
+      :style="{ backgroundImage: `url('/assets/images/${project.imgUrl}')` }"
     ></div>
     <div
       v-else
