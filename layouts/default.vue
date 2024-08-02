@@ -2,7 +2,7 @@
   <div
     class="max-h-svh overflow-y-scroll no-scrollbar bg-palette-BG_avory relative z-10"
   >
-    <div class="bg-gradientCSS"></div>
+    <div class="bg-gradientCSS" :class="router.currentRoute.value.path === '/'?'bg-palette-BG_green':router.currentRoute.value.path === '/projects'?'bg-palette-BG_blue':'bg-orange-300'"></div>
     <div
       class="relative md:max-w-[95%] lg:max-w-[85%] min-h-svh px-2 mx-auto grid grid-cols-[5rem_auto_5rem] grid-rows-[7rem_auto_4.25rem] z-0"
     >
@@ -77,7 +77,7 @@
       <!-- <Footer
         class="relative row-start-3 col-start-1 col-span-3 sm:col-start-2 sm:col-span-1 w-full h-full justify-self-center"
       ></Footer> -->
-      <Footer v-if="router.currentRoute.value.path !== '/me'"></Footer>
+      <Footer v-if="router.currentRoute.value.path !== '/me'" class="self-center col-start-2 -z-10 left-0 justify-center  gap-x-4 sm:gap-x-12 pt-3 childrenShadow"></Footer>
     </div>
   </div>
 </template>
@@ -125,7 +125,7 @@ watch(locale, (newLocale, oldLocale) => {
   filter: drop-shadow(0px 0px 1rem theme("colors.palette.secondary"));
 }
 .bg-gradientCSS {
-  @apply bg-palette-BG_green -z-[8] fixed top-0 left-0 w-full h-svh [clip-path:_polygon(100%_0,_40%_0,_100%_100%,_100%_0)] md:[clip-path:_polygon(32.5%_0,_100%_0,_100%_100%,_82%_100%)];
+  @apply -z-[8] fixed top-0 left-0 w-full h-svh [clip-path:_polygon(100%_0,_40%_0,_100%_100%,_100%_0)] md:[clip-path:_polygon(32.5%_0,_100%_0,_100%_100%,_82%_100%)];
 }
 
 .animateme {

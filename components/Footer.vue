@@ -1,13 +1,8 @@
 <template>
   <div
-    class="relative w-full self-center col-start-2 -z-10 left-0 flex flex-row flex-nowrap items-center justify-center gap-x-4 sm:gap-x-12 pt-3 childrenShadow"
+    class="relative w-full flex flex-row flex-nowrap items-center"
   >
-    <a href="/assets/files/CV_ITA.pdf" target="_blank">
-      <!-- <Icon
-        name="teenyicons:pdf-outline"
-        size="1.5rem"
-        class="text-red-400 sm:text-palette-500 sm:hover:text-red-400"
-      ></Icon> -->
+    <a :href="locale == 'it' ? '/assets/files/Cattelan_CV_ITA.pdf':'/assets/files/Cattelan_CV_EN.pdf'" target="_blank">
       <svg
         class="text-red-400 sm:text-palette-500 sm:hover:text-red-400"
         version="1.0"
@@ -83,7 +78,9 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { locale } = useI18n();
+</script>
 
 <style lang="scss" scoped>
 .childrenShadow {
@@ -91,9 +88,6 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
   p {
     filter: drop-shadow(0 3px 9px theme("colors.palette.BG_blue"));
     z-index: 0;
-  }
-  &:hover > * {
-    // @apply sm:hover:bg-palette-300;
   }
 }
 </style>

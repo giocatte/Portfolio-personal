@@ -1,25 +1,20 @@
 <template>
   <div
-    class="relative row-start-2 col-start-1 col-span-3 w-[90%] h-[90%] place-self-center grid grid-rows-[30%_minmax(auto,_50%)_minmax(auto,_20%)] grid-cols-[60%_40%] gap-2 items-start content-start justify-items-stretch"
+    class="overflow-hidden justify-self-center relative row-start-2 col-start-1 col-span-3 w-[calc(100%_+_1rem)] h-full sm:w-full place-self-center grid grid-rows-[7.5svh_60svh_auto_auto] sm:grid-rows-[10%_minmax(auto,_75%)_minmax(auto,_15%)] grid-cols-[20%_minmax(0,_1fr)] sm:grid-cols-[65%_35%] sm:gap-2 items-start content-start justify-items-stretch"
   >
-    <h2 class="self-center col-start-1 row-start-1 text-3xl 2xl:text-8xl">
-      {{ $t("About") }} me
+    <h2 class="self-center col-start-1 col-span-2 sm:col-span-1 row-start-1 text-3xl 2xl:text-8xl px-3 animate__animated animate__fadeIn">
+      {{ $t("About") }}
     </h2>
-    <p class="col-start-1 row-start-2">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam
-      possimus eaque distinctio repellat natus amet autem fuga dolorum nisi sint
-      veniam sed totam, quis unde excepturi, dignissimos numquam fugit quo quae
-      praesentium doloremque necessitatibus corporis? Cumque libero labore
-      tempora! Iusto perspiciatis doloremque, provident voluptatem odit saepe id
-      incidunt facere unde animi officiis minima eligendi vitae temporibus.
+    <p class="col-start-1 col-span-2 sm:col-span-1 row-start-4 sm:row-start-2 px-3 text-base" v-html="$t('MeDescription')">
     </p>
     <div
-      class="col-start-2 row-start-1 row-span-3 mx-auto my-auto rounded-lg h-[100%] aspect-[5/6] bg-[url('assets/images/meInRome.jpg')] bg-[size:105%] bg-no-repeat bg-center bg-palette-600"
+      class="col-start-1 col-span-2 sm:col-span-1 sm:col-start-2 row-start-2 sm:row-start-1 sm:row-span-3 mx-auto ml-0 sm:rounded-lg h-full w-full sm:w-[97%] bg-[url('assets/images/meInRome.jpg')] bg-[size:105%] bg-no-repeat bg-center bg-palette-600"
     ></div>
+    <Footer class="sm:hidden col-start-1 col-span-2 row-start-3 justify-evenly my-1"></Footer>    
     <div
-      class="col-start-1 row-start-3 w-full h-full flex gap-x-5 flex-row flex-nowrap justify-between items-start"
+      class="hidden sm:flex col-start-1 row-start-3 w-full h-full gap-x-5 flex-row flex-nowrap justify-between items-start"
     >
-      <a href="/assets/files/CV_ITA.pdf" target="_blank"  class="group hoverFade" style="--fade-color: #dc2626;">
+      <a :href="locale == 'it' ? '/assets/files/Cattelan_CV_ITA.pdf':'/assets/files/Cattelan_CV_EN.pdf'" target="_blank"  class="group hoverFade animate__animated animate__fadeInDown" style="--fade-color: #dc2626;">
         <button
           class="btn h-[45px] w-[130px] rounded-full border-red-500 border-2 bg-white group-hover:bg-red-500"
         >
@@ -75,7 +70,7 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
           </span>
         </button>
       </a>
-      <a href="https://www.linkedin.com/in/giosue-cattelan/" target="_blank" class="group hoverFade" style="--fade-color: #3b82f6">
+      <a href="https://www.linkedin.com/in/giosue-cattelan/" target="_blank" class="group hoverFade  animate__animated animate__fadeInDown" style="--fade-color: #3b82f6">
         <button
           class="btn h-[45px] w-[130px] rounded-full border-blue-500 border-2 bg-white group-hover:bg-blue-500"
         >
@@ -89,7 +84,7 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
           ></span>
         </button>
       </a>
-      <a href="https://github.com/giocatte" target="_blank" class="group hoverFade" style="--fade-color: #000">
+      <a href="https://github.com/giocatte" target="_blank" class="group hoverFade  animate__animated animate__fadeInDown" style="--fade-color: #000">
         <button
           class="btn h-[45px] w-[130px] rounded-full border-black border-2 bg-white group-hover:bg-black"
         >
@@ -102,12 +97,12 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
             ></Icon
           ></span></button
       ></a>
-      <a href="mailto:giosuecattelan@gmail.com" target="_blank" class="group hoverFade" style="--fade-color: #dc2626">
+      <a href="mailto:giosuecattelan@gmail.com" target="_blank" class="group hoverFade animate__animated animate__fadeInDown" style="--fade-color: #dc2626">
         <button
           class="btn h-[45px] w-[130px] rounded-full border-red-600 border-2 bg-white group-hover:bg-red-600"
         >
-          <span class="text-base flex items-center justify-center text-red-600 group-hover:text-white"
-            >Send a
+          <span class="text-base flex items-center justify-center text-red-600 group-hover:text-white animate__animated animate__fadeIn"
+            >{{$t("SendA")}}
             <Icon
               name="bxl:gmail"
               class="ml-px rounded-[25%] w-[1.2rem] aspect-video bg-red-600 text-white group-hover:bg-white group-hover:text-red-600"
@@ -116,60 +111,14 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
         </button>
       </a>
     </div>
-    <!-- <div class="relative mt-4 sm:mt-10 p-2 grid items-start gap-y-20">
-      <div
-        class="w-1/2 h-[calc(100%_-_2.5rem)] absolute top-5 left-0 border-palette-800 border-r-[3px]"
-      ></div>
-      <div class="neomorph left">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod
-          sit distinctio repellat inventore nisi beatae eum explicabo earum
-          voluptates?
-        </p>
-      </div>
-      <div class="neomorph right">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod
-          sit distinctio repellat inventore nisi beatae eum explicabo earum
-          voluptates?
-        </p>
-      </div>
-      <div class="neomorph left">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod
-          sit distinctio repellat inventore nisi beatae eum explicabo earum
-          voluptates?
-        </p>
-      </div>
-      <div class="neomorph right">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod
-          sit distinctio repellat inventore nisi beatae eum explicabo earum
-          voluptates?
-        </p>
-      </div>
-    </div> -->
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { locale } = useI18n();
+</script>
 
 <style scoped>
-.neomorph {
-  border-radius: 25px;
-  background: #aee5e9;
-  @apply w-72 h-96 sm:w-[40%] sm:aspect-[5/3] sm:h-[auto] py-10 px-6 text-justify overflow-y-hidden z-10;
-  &.left {
-    box-shadow: 30px -30px 60px #94c3c6, -30px 30px 60px #c8ffff;
-  }
-  &.right {
-    box-shadow: -30px -30px 60px #94c3c6, 30px 30px 60px #c8ffff;
-    @apply justify-self-end;
-  }
-  & p {
-    @apply text-sm;
-  }
-}
 .hoverFade > *:hover {
   animation: fadeIn 650ms;
 }
