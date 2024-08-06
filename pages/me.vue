@@ -1,18 +1,22 @@
 <template>
   <div
-    class="overflow-hidden justify-self-center relative row-start-2 col-start-1 col-span-3 w-[calc(100%_+_1rem)] h-full sm:w-full place-self-center grid grid-rows-[7.5svh_60svh_auto_auto] sm:grid-rows-[10%_minmax(auto,_75%)_minmax(auto,_15%)] grid-cols-[20%_minmax(0,_1fr)] sm:grid-cols-[65%_35%] sm:gap-2 items-start content-start justify-items-stretch"
+    class="overflow-hidden justify-self-center relative row-start-2 col-start-1 col-span-3 w-[calc(100%_+_1rem)] h-full xl:w-full place-self-center grid grid-rows-[7.5svh_60svh_auto_auto] xl:grid-rows-[10%_minmax(auto,_75%)_minmax(auto,_15%)] grid-cols-[20%_minmax(0,_1fr)] xl:grid-cols-[65%_35%] xl:gap-2 items-start content-start justify-items-stretch"
   >
-    <h2 class="self-center col-start-1 col-span-2 sm:col-span-1 row-start-1 text-3xl 2xl:text-8xl px-3 animate__animated animate__fadeIn">
+    <h2 class="self-center col-start-1 col-span-2 xl:col-span-1 row-start-1 text-6xl 2xl:text-8xl px-3 animate__animated animate__fadeIn">
       {{ $t("About") }}
     </h2>
-    <p class="col-start-1 col-span-2 sm:col-span-1 row-start-4 sm:row-start-2 px-3 text-base" v-html="$t('MeDescription')">
+    <p class="col-start-1 col-span-2 xl:col-span-1 row-start-4 xl:row-start-2 px-3 text-base md:text-lg md:p-4 4k:text-2xl" v-html="$t('MeDescription')">
     </p>
+    <div class="col-start-1 col-span-2 xl:col-span-1 xl:col-start-2 row-start-2 xl:row-start-1 xl:row-span-3 mx-auto ml-0 xl:rounded-lg h-full w-full xl:w-[97%] overflow-hidden">
+      <img
+        src="assets/images/meInRome.jpg"
+        class="h-full w-full object-cover object-center"
+        style="transform: scale(1.05);"
+      />
+    </div>
+    <Footer class="xl:hidden col-start-1 col-span-2 row-start-3 justify-evenly my-1"></Footer>    
     <div
-      class="col-start-1 col-span-2 sm:col-span-1 sm:col-start-2 row-start-2 sm:row-start-1 sm:row-span-3 mx-auto ml-0 sm:rounded-lg h-full w-full sm:w-[97%] bg-[url('assets/images/meInRome.jpg')] bg-[size:105%] bg-no-repeat bg-center bg-palette-600"
-    ></div>
-    <Footer class="sm:hidden col-start-1 col-span-2 row-start-3 justify-evenly my-1"></Footer>    
-    <div
-      class="hidden sm:flex col-start-1 row-start-3 w-full h-full gap-x-5 flex-row flex-nowrap justify-between items-start"
+      class="hidden xl:flex col-start-1 row-start-3 w-full h-full gap-x-5 flex-row flex-nowrap justify-between items-start"
     >
       <a :href="locale == 'it' ? '/assets/files/Cattelan_CV_ITA.pdf':'/assets/files/Cattelan_CV_EN.pdf'" target="_blank"  class="group hoverFade animate__animated animate__fadeInDown" style="--fade-color: #dc2626;">
         <button
@@ -79,7 +83,7 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
             <Icon
               name="bxl:linkedin"
               size="1.2rem"
-              class="ml-px text-blue-500 sm:group-hover:text-white border border-blue-500 border-l-0 group-hover:border-white rounded-md p-px relative -left-[2px]"
+              class="ml-px text-blue-500 xl:group-hover:text-white border border-blue-500 border-l-0 group-hover:border-white rounded-md p-px relative -left-[2px]"
             ></Icon
           ></span>
         </button>
@@ -93,7 +97,7 @@ l-4 -648 170 0 171 0 0 608 c1 640 2 654 47 704 10 11 36 29 58 39 38 18 101
             <Icon
               name="bxl:github"
               size="1.2rem"
-              class="text-black sm:text-black group-hover:text-white"
+              class="text-black xl:text-black group-hover:text-white"
             ></Icon
           ></span></button
       ></a>
