@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2025-07-01",
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/i18n"],
   css: ["animate.css/animate.min.css"],
 
@@ -19,6 +20,10 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
+  devServer: {
+    host: "0.0.0.0", // Accetta connessioni da qualsiasi IP
+    port: 8080 // Porta custom
+  },
 
   app: {
     head: {
@@ -33,7 +38,5 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
     // layoutTransition: { name: "layout", mode: "out-in" },
-  },
-
-  compatibilityDate: "2025-07-01",
+  }
 });
